@@ -1,0 +1,144 @@
+.app__navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px); //make it compatible with some other browsers
+  border: 1px solid rgba(255,255,255,0.18);
+  position: fixed;
+  z-index: 2;
+}
+
+// Normally in css, after making ".app__navbar-logo {", you mau have to make ".app__navbar-logo img {" as well
+// But in scss, you can just put "img {" inside ".app__navbar-logo {".
+// This can be nested as much as you want, and also media queries for specific elements.
+
+.app__navbar-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  img{
+    width: 135px;
+    height: 30px;
+    // If screen width >= 2000px, make image bigger
+    @media screen and (min-width: 2000px){
+      width: 225px;
+      height: 50px;
+    }
+  }
+}
+
+.app__navbar-links {
+  flex: 1; //take out the rest of the space that the logo deoesn't take
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none; //kinda not neccesary (is already done)
+  li {
+    margin: 0 1rem;
+    cursor: pointer;
+    flex-direction: column;
+    div{ //sets an invinsible dot above each nav item.
+      width: 5px;
+      height: 5px;
+      background: transparent;
+      border-radius: 50%;
+      margin-bottom: 5px;
+      transition: all 0.3s ease-in-out;
+    }
+    a{
+      color: var(--gray-color);
+      text-decoration: none;
+      flex-direction: column;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: all 0.3s ease-in-out;
+      &:hover{ // an alternative to "a:hover"
+        color: var(--secondary-color)
+      }
+    }
+    &:hover{
+      div{
+        background: var(--secondary-color)
+      }
+    }
+  }
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+}
+
+.app__navbar-menu {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--secondary-color);
+  svg{
+    width: 70%;
+    height: 70%;
+    color: var(--white-color)
+  }
+  div{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+    padding: 1rem;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    background: url('../../assets/bgWhite.png');
+    background-color: var(--white-color);
+    background-size: cover;
+    background-repeat: repeat;
+    box-shadow: 0 0 20px rgba( 168,168,168,0.5);
+    svg{ // The "X" button when the mobile menu is appearing
+      width: 35px;
+      height: 35px;
+      color: var(--secondary-color);
+      margin: 0.5rem 1rem;
+    }
+    ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      li{
+        margin: 1rem;
+        a{
+          color: var(--gray-color);
+          text-decoration: none;
+          font-size: 1rem;
+          text-transform: uppercase;
+          font-weight: 500;
+          transition: all 0.3s ease-in-out;
+          &:hover{ // an alternative to "a:hover"
+            color: var(--secondary-color)
+          }
+        }
+      }
+    }
+    @media screen and (min-width: 900px){
+      display: none;
+    }
+  }
+  @media screen and (min-width: 900px){
+    display: none;
+  }
+}

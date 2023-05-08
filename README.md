@@ -10,12 +10,12 @@ Project is hosted by Netlify. It can be viewed [here](https://mario-binus-portfo
 
 Some screenshots:
 
-![Part 1 of the project's screenshots](./screenshot1.jpg)
-![Part 2 of the project's screenshots](./screenshot2.jpg)
-![Part 3 of the project's screenshots](./screenshot3.jpg)
-![Part 4 of the project's screenshots](./screenshot4.jpg)
-![Part 5 of the project's screenshots](./screenshot5.jpg)
-![Part 6 of the project's screenshots](./screenshot6.jpg)
+![Part 1 of the project's screenshots](./screenshot1.PNG)
+![Part 2 of the project's screenshots](./screenshot2.PNG)
+![Part 3 of the project's screenshots](./screenshot3.PNG)
+![Part 4 of the project's screenshots](./screenshot4.PNG)
+![Part 5 of the project's screenshots](./screenshot5.PNG)
+![Part 6 of the project's screenshots](./screenshot6.PNG)
 
 ---
 
